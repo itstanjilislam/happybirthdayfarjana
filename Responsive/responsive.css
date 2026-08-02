@@ -1,0 +1,751 @@
+/* =========================================================
+   GLOBAL RESPONSIVE FIXES
+   This file loads after every scene stylesheet.
+   ========================================================= */
+
+html,
+body {
+    width: 100%;
+    min-height: 100%;
+}
+
+body {
+    min-height: 100dvh;
+}
+
+.scene {
+    width: 100vw;
+    height: 100dvh;
+    min-height: 100dvh;
+}
+
+/* ---------- TABLET ---------- */
+@media (max-width: 1024px) {
+    .character {
+        width: 23vw;
+    }
+
+    .cake-wrapper {
+        width: 42vw;
+    }
+
+    .big-cake {
+        width: 38vw;
+        bottom: 14vh;
+    }
+
+    .cake-dialogue {
+        left: -48%;
+    }
+
+    .share-cake-stage {
+        --girl-width: 25vw;
+        --boy-width: 25vw;
+        --character-gap: 4vw;
+        --characters-bottom: 11vh;
+    }
+}
+
+/* ---------- MOBILE / SMALL TABLET ---------- */
+@media (max-width: 768px) {
+    .glass-popup {
+        width: min(92vw, 500px);
+        padding: 28px;
+    }
+
+    .popup-text {
+        font-size: clamp(1.15rem, 4.5vw, 1.45rem);
+        margin-bottom: 22px;
+    }
+
+    .pink-btn {
+        padding: 13px 32px;
+        font-size: 1.05rem;
+    }
+
+    .loading-container {
+        width: 94vw;
+        padding: 16px 10px;
+    }
+
+    .loading-title {
+        font-size: clamp(1.4rem, 6vw, 1.9rem);
+        margin-bottom: 28px;
+    }
+
+    .premium-text-box {
+        padding: 38px 24px 28px;
+        border-radius: 24px;
+    }
+
+    .bengali-line {
+        font-size: clamp(1.2rem, 5vw, 1.5rem);
+        gap: 9px;
+        line-height: 1.4;
+    }
+
+    .bengali-line.highlight {
+        font-size: clamp(1.05rem, 4.4vw, 1.3rem);
+        padding-top: 15px;
+    }
+
+    .timer-wrapper {
+        top: -24px;
+        right: 18px;
+    }
+
+    .character {
+        width: min(34vw, 230px);
+        bottom: 15vh;
+    }
+
+    .cake-wrapper {
+        width: min(58vw, 330px);
+        margin-bottom: -35px;
+    }
+
+    .big-cake {
+        width: min(54vw, 340px);
+        bottom: 15vh;
+    }
+
+    .dialogue-box {
+        width: min(250px, 67vw);
+        padding: 11px 17px;
+        border-radius: 26px;
+    }
+
+    .dialogue-box p {
+        font-size: clamp(0.82rem, 3.3vw, 1rem);
+    }
+
+    .boy-dialogue {
+        top: 8%;
+        right: 72%;
+    }
+
+    .cake-dialogue {
+        top: 25%;
+        left: -62%;
+    }
+
+    #peeking-boy-image {
+        bottom: 20%;
+        left: -32%;
+        width: 63%;
+    }
+
+    .big-cake.boy-is-peeking .cake-dialogue {
+        top: 22%;
+        left: -90%;
+    }
+
+    #magic-candle-flame {
+        top: -8%;
+        width: 14%;
+    }
+
+    .candle-instruction {
+        top: 2.5dvh;
+        width: min(410px, 90vw);
+        padding: 11px 16px;
+        font-size: clamp(0.88rem, 3.8vw, 1.05rem);
+    }
+
+    .magic-cursor {
+        font-size: 26px;
+    }
+
+    /* Part 6: keep both characters and dialogue inside the screen */
+    .share-cake-stage {
+        --girl-width: 31vw;
+        --boy-width: 31vw;
+        --character-gap: 4vw;
+        --characters-bottom: 11dvh;
+    }
+
+    .share-character {
+        bottom: var(--characters-bottom);
+    }
+
+    .share-girl {
+        left: calc(
+            50% - (var(--character-gap) / 2) - var(--girl-width)
+        );
+        width: var(--girl-width);
+    }
+
+    .share-boy {
+        left: calc(50% + (var(--character-gap) / 2));
+        right: auto;
+        width: var(--boy-width);
+    }
+
+    .share-dialogue {
+        width: min(280px, 62vw);
+        padding: 11px 14px;
+        border-radius: 22px;
+    }
+
+    .share-dialogue p {
+        font-size: clamp(0.76rem, 3.1vw, 0.95rem);
+        line-height: 1.3;
+    }
+
+    .girl-share-dialogue,
+    .boy-share-dialogue {
+        top: auto;
+        bottom: calc(100% + 13px);
+    }
+
+    .gift-drop {
+        width: min(260px, 62vw);
+        bottom: 14dvh;
+    }
+
+    .gift-instruction {
+        bottom: 4dvh;
+        width: min(390px, 88vw);
+        padding: 11px 16px;
+        font-size: clamp(0.86rem, 3.5vw, 1rem);
+    }
+
+    .gift-note {
+        width: min(500px, 92vw);
+    }
+
+    .gift-note p {
+        top: 26% !important;
+        right: 10% !important;
+        bottom: 21% !important;
+        left: 10% !important;
+        font-size: clamp(0.8rem, 3.2vw, 1rem);
+        line-height: 1.28;
+    }
+
+    .go-final-part-button {
+        bottom: 7%;
+        padding: 10px 18px;
+        font-size: clamp(0.78rem, 3vw, 0.95rem);
+    }
+
+    .final-video-popup {
+        width: min(680px, 92vw);
+        padding: 16px;
+        border-radius: 24px;
+    }
+
+    .final-video-frame {
+        border-width: 4px;
+        border-radius: 17px;
+    }
+
+    .final-video-frame video {
+        max-height: 58dvh;
+    }
+
+    .the-end-button {
+        margin-top: 16px;
+        padding: 11px 26px;
+    }
+
+    .mute-btn {
+        right: 14px;
+        bottom: 14px;
+        padding: 10px;
+    }
+}
+
+/* ---------- SMALL PHONES ---------- */
+@media (max-width: 480px) {
+    .glass-popup {
+        padding: 20px;
+        border-radius: 20px;
+    }
+
+    .video-container {
+        margin-bottom: 18px;
+    }
+
+    .popup-text {
+        font-size: 1.08rem;
+        margin-bottom: 18px;
+    }
+
+    .pink-btn {
+        padding: 12px 27px;
+        font-size: 1rem;
+    }
+
+    .loading-kicker {
+        font-size: 0.65rem;
+        letter-spacing: 0.08em;
+    }
+
+    .loading-title {
+        font-size: 1.32rem;
+        margin-bottom: 24px;
+    }
+
+    .premium-text-box {
+        padding: 34px 18px 22px;
+        border-radius: 20px;
+    }
+
+    .timer-wrapper {
+        width: 46px;
+        height: 46px;
+        top: -22px;
+        right: 13px;
+    }
+
+    .loading-countdown {
+        font-size: 0.95rem;
+    }
+
+    .bengali-line {
+        font-size: 1.08rem;
+    }
+
+    .bengali-line.highlight {
+        font-size: 0.92rem;
+    }
+
+    .emoji-icon {
+        font-size: 1.15rem;
+    }
+
+    .character {
+        width: 40vw;
+        bottom: 16dvh;
+    }
+
+    .cake-wrapper {
+        width: 63vw;
+        margin-bottom: -25px;
+    }
+
+    .big-cake {
+        width: min(64vw, 275px);
+        bottom: 16dvh;
+    }
+
+    .boy-dialogue {
+        right: 55%;
+    }
+
+    .cake-dialogue {
+        top: 24%;
+        left: -68%;
+    }
+
+    .big-cake.boy-is-peeking .cake-dialogue {
+        left: -75%;
+        top: 20%;
+    }
+
+    .share-cake-stage {
+        --girl-width: 34vw;
+        --boy-width: 34vw;
+        --character-gap: 3vw;
+        --characters-bottom: 12dvh;
+    }
+
+    .share-dialogue {
+        width: 67vw;
+        padding: 10px 12px;
+    }
+
+    .girl-share-dialogue {
+        left: 74%;
+    }
+
+    .boy-share-dialogue {
+        left: 18%;
+    }
+
+    .share-dialogue p {
+        font-size: 0.76rem;
+        line-height: 1.25;
+    }
+
+    .gift-drop {
+        width: min(245px, 66vw);
+        bottom: 13dvh;
+    }
+
+    .pink-balloon {
+        width: min(100px, 25vw);
+    }
+
+    .gift-note {
+        width: 94vw;
+    }
+
+    .gift-note p {
+        top: 24% !important;
+        right: 9% !important;
+        bottom: 20% !important;
+        left: 9% !important;
+        font-size: clamp(0.75rem, 3.4vw, 0.9rem);
+        line-height: 1.24;
+    }
+
+    .go-final-part-button {
+        bottom: 6%;
+        padding: 9px 14px;
+        font-size: 0.76rem;
+    }
+
+    .final-video-popup {
+        width: 94vw;
+        padding: 12px;
+        border-radius: 20px;
+    }
+
+    .final-video-frame video {
+        max-height: 53dvh;
+    }
+
+    .the-end-button {
+        margin-top: 13px;
+        padding: 10px 21px;
+        font-size: 0.92rem;
+    }
+}
+
+/* ---------- SHORT LANDSCAPE SCREENS ---------- */
+@media (max-height: 560px) and (orientation: landscape) {
+    .glass-popup {
+        width: min(520px, 78vw);
+        padding: 16px;
+    }
+
+    .video-container {
+        width: min(360px, 55vw);
+        margin: 0 auto 10px;
+    }
+
+    .popup-text {
+        font-size: 1rem;
+        margin-bottom: 10px;
+    }
+
+    .pink-btn {
+        padding: 9px 24px;
+        font-size: 0.9rem;
+    }
+
+    .loading-title {
+        font-size: 1.35rem;
+        margin-bottom: 18px;
+    }
+
+    .premium-text-box {
+        max-width: min(750px, 82vw);
+        padding: 25px 35px 20px;
+    }
+
+    .text-content {
+        gap: 10px;
+    }
+
+    .bengali-line {
+        font-size: 1.1rem;
+    }
+
+    .bengali-line.highlight {
+        font-size: 0.95rem;
+        margin-top: 4px;
+        padding-top: 8px;
+    }
+
+    .big-cake {
+        width: min(31vw, 230px);
+        bottom: 7dvh;
+    }
+
+    .character {
+        width: min(20vw, 155px);
+        bottom: 7dvh;
+    }
+
+    .cake-wrapper {
+        width: min(31vw, 230px);
+        margin-bottom: -26px;
+    }
+
+    .candle-instruction {
+        top: 2dvh;
+        padding: 8px 15px;
+    }
+
+    .share-cake-stage {
+        --girl-width: 20vw;
+        --boy-width: 20vw;
+        --character-gap: 4vw;
+        --characters-bottom: 6dvh;
+    }
+
+    .share-dialogue {
+        width: min(250px, 36vw);
+        padding: 8px 12px;
+    }
+
+    .share-dialogue p {
+        font-size: 0.74rem;
+        line-height: 1.2;
+    }
+
+    .gift-drop {
+        width: min(180px, 28vw);
+        bottom: 6dvh;
+    }
+
+    .pink-balloon {
+        width: min(74px, 10vw);
+    }
+
+    .balloon-string {
+        height: 42px !important;
+    }
+
+    .gift-note {
+        width: min(420px, 56vw);
+    }
+
+    .gift-note p {
+        font-size: 0.72rem;
+    }
+
+    .final-video-popup {
+        width: min(620px, 75vw);
+        padding: 12px;
+    }
+
+    .final-video-frame video {
+        max-height: 67dvh;
+    }
+
+    .the-end-button {
+        margin-top: 10px;
+        padding: 8px 22px;
+    }
+}
+/* =========================================================
+   MOBILE FIX: Cake peeking boy + all dialogue + share cake
+   ========================================================= */
+
+/* This is the missing rule that makes the girl and boy images
+   obey their container size instead of showing at full image size. */
+.share-character > img {
+    display: block;
+    width: 100%;
+    height: auto;
+}
+
+/* Mobile: keep every Part 3 dialogue at the top of the screen. */
+@media (max-width: 768px) {
+    .boy-dialogue,
+    .cake-dialogue,
+    .big-cake.boy-is-peeking .cake-dialogue {
+        position: fixed;
+        top: 3dvh;
+        right: auto;
+        bottom: auto;
+        left: 50%;
+        width: min(320px, 88vw);
+        transform: translateX(-50%);
+        z-index: 150;
+    }
+
+    /* Smaller peeking boy, correctly tucked behind the cake. */
+    #peeking-boy-image {
+        bottom: 50%;
+        left: -45%;
+        width: 42%;
+    }
+
+    /* Keep the candle attached to the cake on mobile. */
+    #magic-candle-flame {
+        top: -14%;
+        left: 52%;
+        width: 14%;
+    }
+
+    /* Part 6: smaller characters, side by side. */
+    .share-cake-stage {
+        --girl-width: 31vw;
+        --boy-width: 31vw;
+        --character-gap: 4vw;
+        --characters-bottom: 11dvh;
+    }
+
+    .share-girl {
+        left: calc(
+            50% - (var(--character-gap) / 2) - var(--girl-width)
+        );
+        width: var(--girl-width);
+    }
+
+    .share-boy {
+        left: calc(50% + (var(--character-gap) / 2));
+        right: auto;
+        width: var(--boy-width);
+    }
+
+    /* Only one Part 6 dialogue appears at a time.
+       Put it safely at the top on mobile. */
+    .share-dialogue,
+    .girl-share-dialogue,
+    .boy-share-dialogue {
+        position: fixed;
+        top: 2dvh;
+        right: auto;
+        bottom: auto;
+        left: 50%;
+        width: min(330px, 88vw);
+        padding: 11px 15px;
+        transform: translateX(-50%);
+        z-index: 150;
+    }
+
+    .share-dialogue p {
+        font-size: clamp(0.8rem, 3.2vw, 0.98rem);
+        line-height: 1.3;
+    }
+}
+
+@media (max-width: 480px) {
+    #peeking-boy-image {
+        bottom: 10%;
+        left: -23%;
+        width: 40%;
+    }
+
+    .share-cake-stage {
+        --girl-width: 34vw;
+        --boy-width: 34vw;
+        --character-gap: 3vw;
+        --characters-bottom: 12dvh;
+    }
+
+    .share-dialogue,
+    .girl-share-dialogue,
+    .boy-share-dialogue {
+        top: 3dvh;
+        width: 90vw;
+    }
+}
+/* Final mobile position fixes */
+@media (max-width: 768px) {
+    /* Smaller peeking boy: fully behind the cake. */
+    #peeking-boy-image {
+        bottom: 12% !important;
+        left: -22% !important;
+        width: 34% !important;
+    }
+
+    /* Part 3 dialogue: always at the top of the phone screen. */
+    .boy-dialogue,
+    .cake-dialogue,
+    .big-cake.boy-is-peeking .cake-dialogue {
+        position: fixed !important;
+        top: 12dvh !important;
+        right: auto !important;
+        bottom: auto !important;
+        left: 50% !important;
+        width: min(340px, 86vw) !important;
+        transform: translateX(-50%) !important;
+        z-index: 150 !important;
+    }
+
+    /* Part 6 dialogue: always at the top of the phone screen. */
+    .share-dialogue,
+    .girl-share-dialogue,
+    .boy-share-dialogue {
+        position: fixed !important;
+        top: 12dvh !important;
+        right: auto !important;
+        bottom: auto !important;
+        left: 50% !important;
+        width: min(340px, 86vw) !important;
+        transform: translateX(-50%) !important;
+        z-index: 150 !important;
+    }
+
+    /* Allows touching the candle without the browser treating it as scrolling. */
+    #magic-candle-flame {
+        touch-action: none;
+    }
+
+    /* Allows tapping the cake three times on a phone. */
+    .cut-cake-mode #big-cake-image {
+        touch-action: manipulation;
+    }
+}
+/* Phone-only touch mechanics */
+@media (hover: none) and (pointer: coarse) {
+    /* Hide the mouse-only blower cursor on touch devices. */
+    .candle-mode .magic-cursor {
+        display: none !important;
+    }
+
+    #magic-candle-flame,
+    .cut-cake-mode #big-cake-image {
+        touch-action: none;
+        -webkit-user-select: none;
+        user-select: none;
+    }
+}
+@media (max-width: 768px) {
+    /* GIRL'S pink dialogue box */
+    .girl-share-dialogue {
+        position: fixed !important;
+        top: -4dvh !important;       /* Change this to move pink box */
+        right: auto !important;
+        bottom: auto !important;
+        left: 50% !important;
+        width: 50vw !important;     /* Change this to resize pink box */
+        transform: translateX(-50%) !important;
+    }
+
+    /* BOY'S blue dialogue box */
+    .boy-share-dialogue {
+        position: fixed !important;
+        top: -20dvh !important;      /* Change this to move blue box */
+        right: auto !important;
+        bottom: auto !important;
+        left: 50% !important;
+        width: 60vw !important;     /* Change this to resize blue box */
+        transform: translateX(-50%) !important;
+    }
+}
+/* Hide peeking boy on phones/tablets only */
+@media (max-width: 768px) {
+    #peeking-boy-image {
+        display: none !important;
+    }
+}
+/* ===== Force Cake Dialogue Position on Mobile ===== */
+@media (max-width: 768px) {
+
+    .cake-dialogue,
+    .big-cake.boy-is-peeking .cake-dialogue {
+        position: fixed !important;
+
+        /* Change this value to move the dialogue */
+        top: -15dvh !important;
+
+        left: 50% !important;
+        right: auto !important;
+        bottom: auto !important;
+
+        width: min(340px, 86vw) !important;
+
+        transform: translateX(-50%) !important;
+
+        z-index: 9999 !important;
+    }
+
+}

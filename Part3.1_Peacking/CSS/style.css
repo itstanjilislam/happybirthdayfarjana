@@ -1,0 +1,89 @@
+/* --- Part 3.1: Boy Peeking Behind the Cake --- */
+
+#scene-peeking {
+    overflow: hidden;
+}
+
+/* Cake: medium size and centred */
+.peeking-cake {
+    position: absolute;
+    left: 50%;
+    bottom: 8vh;
+    width: clamp(280px, 32vw, 440px);
+    transform: translateX(-50%);
+    z-index: 10;
+}
+
+.peeking-cake img {
+    display: block;
+    width: 100%;
+    height: auto;
+    filter: drop-shadow(0 16px 28px rgba(0, 0, 0, 0.22));
+}
+
+/* Boy: small and visible only from the LEFT side of cake */
+.peeking-boy {
+    position: absolute;
+    left: calc(50% - clamp(190px, 17vw, 240px));
+    bottom: calc(8vh + 10px);
+    width: clamp(115px, 12vw, 165px);
+    opacity: 0;
+    z-index: 5; /* Behind the cake */
+}
+
+.peeking-boy img {
+    display: block;
+    width: 100%;
+    height: auto;
+}
+
+/* Dialogue is above the boy/cake and slightly left from centre */
+.peeking-dialogue {
+    position: absolute;
+    top: 18%;
+    left: calc(50% - clamp(30px, 5vw, 80px));
+    width: min(330px, 78vw);
+    padding: 15px 28px;
+    opacity: 0;
+    text-align: center;
+    background: rgba(255, 245, 250, 0.96);
+    border: 1px solid #e0e0e0;
+    border-radius: 50px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+    transform: translateX(-50%);
+    z-index: 20;
+}
+
+.peeking-dialogue p {
+    margin: 0;
+    color: #c2185b;
+    font-family: 'Fredoka', sans-serif;
+    font-size: 1.1rem;
+    font-weight: 500;
+    line-height: 1.4;
+}
+
+/* Phone layout */
+@media (max-width: 768px) {
+    .peeking-cake {
+        bottom: 13vh;
+        width: min(68vw, 360px);
+    }
+
+    .peeking-boy {
+        left: calc(50% - min(38vw, 205px));
+        bottom: calc(13vh + 8px);
+        width: min(25vw, 145px);
+    }
+
+    .peeking-dialogue {
+        top: 13%;
+        left: 43%;
+        width: min(310px, 82vw);
+        padding: 13px 22px;
+    }
+
+    .peeking-dialogue p {
+        font-size: 1rem;
+    }
+}

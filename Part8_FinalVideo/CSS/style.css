@@ -1,0 +1,86 @@
+/* --- Part 8: Final Video Popup --- */
+
+.final-video-stage {
+    position: absolute;
+    inset: 0;
+    z-index: 200;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    opacity: 0;
+    pointer-events: none;
+}
+
+.final-video-blur {
+    position: absolute;
+    inset: 0;
+    background: rgba(42, 22, 45, 0.2);
+    backdrop-filter: blur(14px) brightness(0.82);
+    -webkit-backdrop-filter: blur(14px) brightness(0.82);
+}
+
+.final-video-popup {
+    position: relative;
+    z-index: 2;
+    width: min(680px, 88vw);
+    padding: clamp(18px, 3vw, 30px);
+    border: 2px solid rgba(255, 222, 239, 0.9);
+    border-radius: 32px;
+    background: rgba(255, 241, 248, 0.82);
+    box-shadow:
+        0 22px 55px rgba(52, 19, 47, 0.36),
+        inset 0 1px 0 rgba(255, 255, 255, 0.9);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+}
+
+.final-video-glow {
+    position: absolute;
+    inset: -25px;
+    z-index: -1;
+    border-radius: 45px;
+    background: radial-gradient(
+        circle,
+        rgba(255, 112, 173, 0.42),
+        transparent 68%
+    );
+    filter: blur(22px);
+}
+
+.final-video-frame {
+    overflow: hidden;
+    border: 5px solid #ffb8d5;
+    border-radius: 22px;
+    background: #241522;
+    box-shadow:
+        0 10px 24px rgba(126, 29, 79, 0.24),
+        inset 0 0 0 2px rgba(255, 255, 255, 0.45);
+}
+
+.final-video-frame video {
+    display: block;
+    width: 100%;
+    max-height: 62vh;
+    object-fit: contain;
+}
+
+.the-end-button {
+    display: block;
+    margin: 22px auto 0;
+    padding: 13px 34px;
+    border: 0;
+    border-radius: 999px;
+    background: linear-gradient(135deg, #ff72aa, #dc3f82);
+    box-shadow: 0 7px 16px rgba(169, 32, 93, 0.32);
+    color: white;
+    cursor: pointer;
+    font-family: 'DynaPuff', cursive;
+    font-size: clamp(1rem, 1.5vw, 1.2rem);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.the-end-button:hover {
+    transform: translateY(-3px) scale(1.05);
+    box-shadow: 0 11px 22px rgba(169, 32, 93, 0.42);
+}

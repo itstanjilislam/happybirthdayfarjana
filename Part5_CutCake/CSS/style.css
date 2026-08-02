@@ -1,0 +1,42 @@
+/* --- Part 5: Cut Cake --- */
+
+.cut-cake-mode,
+.cut-cake-mode * {
+    cursor: none !important;
+}
+
+.cut-cake-mode .magic-cursor {
+    display: block;
+}
+
+/* Glowing cutting line on the same existing cake */
+.cut-guideline {
+    position: absolute;
+    top: 17%;
+    left: 50%;
+    width: 3px;
+    height: 67%;
+    opacity: 0;
+    pointer-events: none;
+    transform: translateX(-50%) rotate(-6deg);
+    transform-origin: center;
+    border-radius: 50px;
+    background: linear-gradient(
+        to bottom,
+        rgba(255, 255, 255, 0),
+        #ffffff 12%,
+        #ff4081 50%,
+        #ffffff 88%,
+        rgba(255, 255, 255, 0)
+    );
+    box-shadow:
+        0 0 8px #ffffff,
+        0 0 16px #ff4081,
+        0 0 30px rgba(255, 64, 129, 0.8);
+    z-index: 8;
+}
+
+/* Cake becomes clickable during Part 5 */
+.cut-cake-mode #big-cake-image {
+    pointer-events: auto;
+}

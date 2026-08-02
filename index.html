@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Happy Birthday Janaaaa!</title>
+    <link
+        href="https://fonts.googleapis.com/css2?family=DynaPuff:wght@400;500;700&family=Fredoka:wght@400;500;600;700&family=Galada&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="Part1_Welcome/CSS/style.css">
+    <link rel="stylesheet" href="Part2_Loading/CSS/style.css">
+    <!-- Part 3 CSS -->
+    <link rel="stylesheet" href="Part3_CakeIntro/CSS/style.css">
+    <link rel="stylesheet" href="Part4_Candle/CSS/style.css">
+    <link rel="stylesheet" href="Part5_CutCake/CSS/style.css">
+    <link rel="stylesheet" href="Part6_ShareCake/CSS/style.css">
+    <link rel="stylesheet" href="Part7_Gift/CSS/style.css">
+    <link rel="stylesheet" href="Part8_FinalVideo/CSS/style.css">
+    <link rel="stylesheet" href="Responsive/responsive.css">
+</head>
+
+<body>
+
+    <div id="clouds-container"></div>
+    <div id="particles-container"></div>
+    <canvas id="fireworks-canvas"></canvas>
+
+    <!-- Scene 1: Welcome -->
+    <section id="scene-welcome" class="scene active">
+        <div class="glass-popup" id="welcome-popup">
+            <div class="video-container">
+                <video id="welcome-video" controls autoplay playsinline preload="auto">
+                    <source
+        src="https://res.cloudinary.com/osleyptc/video/upload/q_auto/f_auto/welcome_uwxi02.mp4"
+        type="video/mp4">
+                </video>
+            </div>
+            <p class="popup-text">Are you ready for something special, Janaaaa?</p>
+            <button id="btn-ready" class="pink-btn">Yeappp</button>
+        </div>
+    </section>
+
+    <!-- Scene 2: Loading -->
+    <section id="scene-loading" class="scene">
+        <div class="glow-effect"></div>
+        <div class="loading-container">
+            <p class="loading-kicker">A little memory of ours</p>
+            <h1 class="loading-title">Wait... Something special is coming...</h1>
+            <div class="premium-text-box">
+                <div class="timer-wrapper">
+                    <svg class="timer-ring" viewBox="0 0 36 36">
+                        <path class="ring-bg"
+                            d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831" />
+                        <path class="ring-progress"
+                            d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831" />
+                    </svg>
+                    <div class="timer-content">
+                        <span id="loading-countdown" class="loading-countdown">11</span>
+                    </div>
+                </div>
+                <div class="text-content">
+                    <p class="bengali-line"><span class="emoji-icon"></span><span class="text">জানো আমাকে বলা তোমার
+                            প্রথম লাইন কি ছিলো?</span></p>
+
+                    <p class="bengali-line highlight"><span class="emoji-icon">✨</span><span class="text">তুমি
+                            অরিয়েন্টেশনের দিন আমাকে পিছন থেকে বলেছিলে— 'Hi, আমি ফারজানা। আমাদের কথা হয়েছিলো
+                            মেসেন্জারে।'</span></p>
+                </div>
+            </div>
+        </div>
+
+    </section>
+
+    <!-- Scene 3: Cake Intro -->
+    <section id="scene-cake-intro" class="scene">
+        <!-- The Boy Character -->
+        <div id="boy-container" class="character">
+            <!-- Cake balanced on his hands -->
+            <div class="cake-wrapper" id="cakeWrapper">
+                <img id="walking-cake" src="Part3_CakeIntro/Assets/Cake/full_cake.png" alt="Cake">
+            </div>
+            <img id="boy-img" src="Part3_CakeIntro/Assets/Boy_Walking/boy_leftfoot_front.png" alt="Boy">
+
+            <!-- Subtitle Box 1: Next to his head -->
+            <div id="boy-dialogue" class="dialogue-box boy-dialogue">
+                <p>Phew... This cake is heavier than it looks...</p>
+            </div>
+        </div>
+
+        <!-- The GIANT Cake (Drops to the floor) -->
+        <div id="big-cake" class="big-cake">
+            <img id="big-cake-image" src="Part3_CakeIntro/Assets/Cake/full_cake.png" alt="Big Cake">
+
+            <img id="peeking-boy-image" src="Part3_CakeIntro/Assets/Boy_Walking/boy_peacking.png"
+                alt="Boy peeking behind cake">
+            <img id="magic-candle-flame" src="Part3_CakeIntro/Assets/Candle_Flames/Flame_1.png"
+                alt="Magic candle flame">
+
+            <!-- Subtitle Box 2: On the side of the giant cake -->
+            <div id="cake-dialogue" class="dialogue-box cake-dialogue">
+                <p id="cake-dialogue-text"></p>
+            </div>
+        </div>
+        <!-- Part 7: Gift -->
+        <div id="gift-stage" class="gift-stage">
+            <div id="gift-focus-blur" class="gift-focus-blur"></div>
+            <div id="gift-drop" class="gift-drop">
+                <div class="pink-balloon"></div>
+                <div class="balloon-string"></div>
+
+                <div id="gift-box" class="gift-box">
+                    <img id="gift-closed-image" src="Part7_Gift/Assets/gift_box_with_lid.png" alt="Pink birthday gift">
+
+                    <img id="gift-open-image" src="Part7_Gift/Assets/gift_box_top_view.png" alt="Opened birthday gift">
+                </div>
+            </div>
+            <!-- Part 8: Final Video Popup -->
+            <div id="final-video-stage" class="final-video-stage">
+                <div class="final-video-blur"></div>
+
+                <div class="final-video-popup">
+                    <div class="final-video-glow"></div>
+
+                    <div class="final-video-frame">
+                        <video id="final-message-video" controls playsinline preload="metadata">
+                               <source
+        src="https://res.cloudinary.com/osleyptc/video/upload/v1785703035/final-message_glr2fs.mp4"
+        type="video/mp4">
+                        </video>
+                    </div>
+
+                    <button id="btn-the-end" class="the-end-button">
+                        The End ✨
+                    </button>
+                </div>
+            </div>
+            <div id="gift-instruction" class="gift-instruction">
+                Hover your mouse 3 times to open the gift.
+            </div>
+
+            <div id="gift-note" class="gift-note">
+                <img src="Part7_Gift/Assets/Note.png" alt="A handwritten note">
+
+                <p>
+                    The gift is also Empty Cause I want to give you something in real life but I am not sure you will
+                    take it or Not... But I have something for you in real life… I just don’t know you will take it or
+                    Not… But I will ask it… Will you take the Gift as a Birthday Present? If yes when I ask you about it
+                    Just tell me Yes if No that’s Okay too
+                </p>
+                <button id="go-final-part-button" class="go-final-part-button">
+                    Go to the Final Part →
+                </button>
+            </div>
+        </div>
+        <!-- Part 6: Share Cake -->
+        <div id="share-cake-stage" class="share-cake-stage">
+
+            <div id="share-girl" class="share-character share-girl">
+                <img src="Part3_CakeIntro/Assets/Girl/girl_angry.png" alt="Girl">
+
+                <div id="girl-share-dialogue" class="share-dialogue girl-share-dialogue">
+                    <p></p>
+                </div>
+            </div>
+
+            <div id="share-boy" class="share-character share-boy">
+                <img id="share-boy-image" src="Part6_ShareCake/Assets/boy_hand_up_like_feeding_possition.png" alt="Boy">
+
+                <div id="boy-share-dialogue" class="share-dialogue boy-share-dialogue">
+                    <p></p>
+                </div>
+            </div>
+
+            <!-- Final five-second cloud and grass transition -->
+            <div id="rain-world" class="rain-world">
+                <div id="cloud-layer" class="cloud-layer"></div>
+                <div class="rain-lines"></div>
+                <div id="grass-layer" class="grass-layer"></div>
+            </div>
+
+        </div>
+    </section>
+
+
+
+    <!-- Part 4: Candle scene -->
+    <section id="scene-candle" class="scene">
+        <!-- Your candle content will go here later -->
+    </section>
+    <div id="candle-instruction" class="candle-instruction"></div>
+    <div id="magic-cursor" class="magic-cursor">💨</div>
+    <button id="btn-mute" class="mute-btn">🔊</button>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/howler/2.2.3/howler.min.js"></script>
+
+    <!-- Core Scripts -->
+    <script src="Shared/JS/Core/audioManager.js"></script>
+    <script src="Shared/JS/Core/sceneManager.js"></script>
+
+    <!-- Part 1 Scripts -->
+    <script src="Part1_Welcome/JS/Effects/welcomeEffects.js"></script>
+    <script src="Part1_Welcome/JS/Effects/fireworks.js"></script>
+    <script src="Part1_Welcome/JS/welcome.js"></script>
+    <script src="Part1_Welcome/JS/app.js"></script>
+
+    <!-- Part 2 Scripts -->
+    <script src="Part2_Loading/JS/loading.js"></script>
+
+    <!-- Part 3 Scripts (YOU MUST ADD THIS LINE!) -->
+    <script src="Part3_CakeIntro/JS/cakeIntro.js"></script>
+
+    <script src="Part4_Candle/JS/candle.js"></script>
+    <script src="Part5_CutCake/JS/shareCake.js"></script>
+    <script src="Part6_ShareCake/JS/shareCake.js"></script>
+    <script src="Part7_Gift/JS/gift.js"></script>
+    <script src="Part8_FinalVideo/JS/finalVideo.js"></script>
+    <script src="Responsive/touchControls.js"></script>
+</body>
+
+</html>
+</body>
+
+</html>
